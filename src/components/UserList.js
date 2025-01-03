@@ -21,10 +21,10 @@ const UserList = () => {
           <h1>Users</h1>
           <ul>
             {users.map(user => (
-              <li key={user.id}>
+              <li key={user.id} className={classes.text}>
                 {user.name} 
                 <Link to={`/user/${user.id}`}>
-                  <button>View Details</button>
+                  <button className={classes.button}>View Details</button>
                 </Link>
               </li>
             ))}
