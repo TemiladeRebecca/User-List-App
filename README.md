@@ -18,7 +18,7 @@ The app is fully responsive, ensuring usability on devices of all screen sizes, 
 
 ## Demo
 
-Check out the demo of SavorySwap app at [Users List Demo](https://savoryswap.netlify.app/).
+Check out the demo of SavorySwap app at [Users List Demo](https://user-list-app-indol.vercel.app/).
 
 ## Installation and Setup
 
