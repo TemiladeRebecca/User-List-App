@@ -24,7 +24,7 @@ const UserDetails = () => {
             <h1>{user.name}'s Profile</h1>
             <p><strong>Username:</strong> {user.username}</p>
             <p><strong>Email:</strong> {user.email}</p>
-            <p>
+            <p className={classes.text}>
                 <strong>Address:</strong> {`${user.address.street}, ${user.address.suite}`}
                 <br />
                 {user.address.city}
@@ -35,14 +35,14 @@ const UserDetails = () => {
             </p>
             <p><strong>Phone:</strong> {user.phone}</p>
             <p><strong>Website:</strong> {user.website}</p>
-            <p><strong>Company:</strong> {user.company.name}
+            <p className={classes.text}><strong>Company:</strong> {user.company.name}
                 <br />
                 {user.company.catchPhrase}
                 <br />
                 {user.company.bs}
             </p>
 
-            <Link to="/"><button>Back to Users</button></Link>
+            <Link to="/"><button className={classes.button}>Back to Users</button></Link>
         </div>
     );
 }
