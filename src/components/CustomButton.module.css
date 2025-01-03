@@ -1,52 +1,65 @@
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    position: fixed;
-    z-index: 50;
-    right: 4rem;
-  }
-  
-  .svgIcon {
-    width: 24px;
-    height: 24px;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-  
-  .toggleContainer {
-    position: relative;
-    display: inline-block;
-    width: 2.5rem;
-    margin-left: 1.5rem;
-    margin-top: 1.5rem;
-    vertical-align: middle;
-    cursor: pointer;
-    transition: all 0.2s ease-in;
-  }
-  
-  .toggleCheckbox {
-    position: absolute;
-    display: block;
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 50%;
-    background-color: white;
-    border: 4px solid transparent;
-    appearance: none;
-    cursor: pointer;
-  }
-  
-  .toggleLabel {
-    display: block;
-    overflow: hidden;
-    height: 1.5rem; 
-    border-radius: 50%;
-    background-color: #d1d5db;
-    cursor: pointer;
-  }
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  z-index: 50;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem;
+  height: auto;
+}
+
+.svgIcon {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.toggleContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 0.5rem;
+}
+
+.toggleCheckbox {
+  display: none; /* Hide the checkbox */
+  flex-direction: column;
+}
+
+.toggleLabel {
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggleLabel::after {
+  content: '';
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  transition: transform 0.3s ease;
+}
+
+.toggleCheckbox:checked + .toggleLabel {
+  background-color: #007bff;
+}
+
+.toggleCheckbox:checked + .toggleLabel::after {
+  transform: translateX(20px);
+}
