@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './CustomButton.module.css'
+import classes from './CustomButton.module.css';
 
 const CustomButton = ({ isDarkMode, toggleTheme }) => {
   return (
